@@ -22,6 +22,8 @@ media-science-stack/
 ├── 04_programmatic_bidding/     # CTR Prediction & Bid Optimization Algorithms
 ├── 05_brand_sentiment/          # NLP for Brand Lift & Social Listening
 └── data/                        # Sample datasets (anonymized)
+```
+
 
 
 [RG](https://www.rajivgopinath.com/)
