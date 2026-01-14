@@ -65,26 +65,6 @@ Mature organizations treat Audience Intelligence as a **continuous feedback loop
 
 ---
 
-
-
-
-
-
-
-
-##  Theoretical Background
-Traditional marketing relies on demographics (Age, Gender). Modern Data Science uses **Behavioral** and **Psychographic** patterns. This module implements Unsupervised and Supervised Learning to decode audience structures.
-
-### Core Methodologies
-1.  **Unsupervised Learning (Segmentation):**
-    * **Algorithm:** K-Means Clustering & Hierarchical Clustering.
-    * **Goal:** To discover hidden groups within the data without prior labeling.
-    * **Math:** Minimizing Intra-cluster variation (WCSS) and maximizing Inter-cluster distance.
-
-2.  **Predictive Modeling (Lookalike):**
-    * **Algorithm:** Random Forest / XGBoost.
-    * **Goal:** To calculate a "Propensity Score" for new users based on their similarity to high-value customers.
-
 ---
 
 ## Technical Deep Dive & Tool Stack
