@@ -1,18 +1,18 @@
 # Module 01: Audience Intelligence & Segmentation
 
 
-# 🚀 Data Science in Media & Audience Intelligence
+# Data Science in Media & Audience Intelligence
 
 ![Domain](https://img.shields.io/badge/Domain-AdTech%20%26%20MarTech-orange)
 ![Methodology](https://img.shields.io/badge/Methodology-Machine%20Learning-blue)
 ![Status](https://img.shields.io/badge/Status-Academic%20Review-green)
 
-## 📖 Executive Summary
+##  Executive Summary
 Data Science serves as the architectural backbone of modern media planning and strategic marketing. It facilitates the paradigm shift from intuition-based targeting to **systematic, empirically testable audience segmentation**. By leveraging high-dimensional behavioral data, organizations can identify latent audience clusters and optimize message delivery vectors (channel, timing, creative) for maximum ROI [1, 2].
 
 ---
 
-## 🧠 1. Core Concepts: The Intersection of Data & Strategy
+## 1. Core Concepts: The Intersection of Data & Strategy
 
 ### 1.1. Marketing Data Science
 Marketing Data Science is not merely about reporting; it is the synthesis of statistical modeling, machine learning, and domain expertise. It aims to extract actionable signals from noise.
@@ -25,7 +25,7 @@ Audience Intelligence is the practice of constructing a multi-dimensional unders
 
 ---
 
-## 🔬 2. Technical Framework: Segmentation & Algorithms
+##  2. Technical Framework: Segmentation & Algorithms
 
 ### 2.1. Audience Segmentation
 Segmentation is the mathematical process of partitioning a population into homogeneous clusters to maximize intra-cluster similarity and inter-cluster difference. This allows for hyper-personalized communication strategies [3, 6].
@@ -40,7 +40,7 @@ Segmentation is the mathematical process of partitioning a population into homog
 
 ---
 
-## 📊 3. Data Engineering: Signals & Sources
+##  3. Data Engineering: Signals & Sources
 
 To build robust models, we engineer features from three primary data categories [2, 4, 8]:
 
@@ -55,7 +55,7 @@ To build robust models, we engineer features from three primary data categories 
 
 ---
 
-## 🔄 4. The Strategic Loop: From Data to Deployment
+##  4. The Strategic Loop: From Data to Deployment
 
 Mature organizations treat Audience Intelligence as a **continuous feedback loop** rather than a linear process [4, 8]:
 
@@ -74,7 +74,7 @@ Mature organizations treat Audience Intelligence as a **continuous feedback loop
 
 
 
-## 🎓 Theoretical Background
+##  Theoretical Background
 Traditional marketing relies on demographics (Age, Gender). Modern Data Science uses **Behavioral** and **Psychographic** patterns. This module implements Unsupervised and Supervised Learning to decode audience structures.
 
 ### Core Methodologies
@@ -89,7 +89,7 @@ Traditional marketing relies on demographics (Age, Gender). Modern Data Science 
 
 ---
 
-## 🔬 Technical Deep Dive & Tool Stack
+## Technical Deep Dive & Tool Stack
 
 The table below outlines the bridge between academic theory and industrial application used in this repository.
 
@@ -102,13 +102,13 @@ The table below outlines the bridge between academic theory and industrial appli
 
 ---
 
-## 💼 Business Insights
+## Business Insights
 How to translate these technical models into strategy:
 
 * **From Clustering to Personalization:** Instead of targeting "Women 25-34", we target "Cluster 3: Discount-Driven Mobile Users", serving them specific coupon ads.
 * **From Propensity to Bidding:** We adjust Real-Time Bidding (RTB) prices based on the user's predicted LTV score.
 
-## 📚 References & Academic Literature
+## References & Academic Literature
 
 The concepts outlined in this repository are based on the following academic and industrial research:
 
