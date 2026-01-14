@@ -1,5 +1,3 @@
-# Module 01: Audience Intelligence & Segmentation
-
 
 # Data Science in Media & Audience Intelligence
 
