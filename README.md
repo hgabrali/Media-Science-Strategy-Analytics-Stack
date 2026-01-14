@@ -25,6 +25,7 @@ media-science-stack/
 ```
 
 
+## 📚 References & Academic Literature
 
 * [RG](https://www.rajivgopinath.com/)
 * [A data science-based marketing decision support system for brand
