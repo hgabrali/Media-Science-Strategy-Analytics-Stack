@@ -139,8 +139,7 @@ Segments allow us to isolate specific subsets of traffic based on behavior, geog
 ## 🔵 Task 2: System Segments Application
 *Using Google's pre-built models to analyze standard cohorts.*
 
-![System Segments Visualization](PLACEHOLDER_FOR_SCREENSHOT_TASK2.png)
-*(Insert a screenshot showing a comparison, e.g., "All Users" vs. "Mobile Traffic")*
+
 
 ### 🧐 Observation
 By applying the **"Mobile Traffic"** system segment against **"All Users"**:
@@ -152,8 +151,7 @@ By applying the **"Mobile Traffic"** system segment against **"All Users"**:
 ## 🟣 Task 3: Custom Segment Construction
 *Creating a niche segment to isolate high-engagement users.*
 
-![Custom Segment Builder](PLACEHOLDER_FOR_SCREENSHOT_TASK3.png)
-*(Insert screenshot of the Segment Builder interface)*
+
 
 ### 🛠️ Configuration Details
 * **Segment Name:** *Engaged Desktop Users*
@@ -167,8 +165,7 @@ Isolating this group revealed that while they make up a smaller percentage of tr
 ## 🟠 Task 4: Conditional Logic (Boolean Filtering)
 *Applying complex AND/OR logic to refine targeting.*
 
-![Conditions Tab](PLACEHOLDER_FOR_SCREENSHOT_TASK4.png)
-*(Insert screenshot of the 'Conditions' tab in Segment Builder)*
+
 
 ### 🧠 Logic Structure
 We utilized the **Conditions** tab to filter users who meet specific multi-dimensional criteria:
@@ -183,8 +180,7 @@ We utilized the **Conditions** tab to filter users who meet specific multi-dimen
 ## 🔴 Task 5: Sequential Segmentation (Funnel Analysis)
 *Tracking user journeys across time.*
 
-![Sequence Segment](PLACEHOLDER_FOR_SCREENSHOT_TASK5.png)
-*(Insert screenshot of the 'Sequences' setup showing Step 1 -> Step 2)*
+
 
 ### 🔄 The Journey
 We defined a sequence to identify **Cart Abandoners**:
@@ -200,8 +196,7 @@ This segment represents the "Low Hanging Fruit" for retargeting campaigns. These
 ## 🟤 Task 6 & 7: Import & Management
 *Governance and scalability of analytics assets.*
 
-![Segment List Management](PLACEHOLDER_FOR_SCREENSHOT_TASK7.png)
-*(Insert screenshot of the segment list showing Shared/Imported segments)*
+
 
 ### 📂 Asset Management
 * **Importing:** Leveraged the *Google Solutions Gallery* to adopt industry-standard e-commerce segments.
