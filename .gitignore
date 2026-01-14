@@ -1,0 +1,56 @@
+# -------------------------------------------------------------------------
+# Python & Runtime
+# -------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments (Keep your local setup local)
+venv/
+env/
+.env
+.venv/
+
+# -------------------------------------------------------------------------
+# Data Science & Analytics (IMPORTANT)
+# -------------------------------------------------------------------------
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore actual datasets (Privacy & File Size limits)
+# We want the code, not the client data, on GitHub.
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.pickle
+*.pkl
+data/raw/
+data/processed/
+# Exception: Keep the sample data folder if it contains dummy data
+!data/sample/
+
+# -------------------------------------------------------------------------
+# IDE & Editor Configuration
+# -------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+
+# -------------------------------------------------------------------------
+# AdTech & API Security (CRITICAL)
+# -------------------------------------------------------------------------
+# Never commit API keys for Google Ads, Facebook Graph API, or DV360
+config.json
+secrets.yaml
+credentials.json
+google_ads_credentials.json
+service_account.json
+.env
+
+# -------------------------------------------------------------------------
+# OS Specific
+# -------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
