@@ -1,9 +1,9 @@
-# Forecasting Customer Behavior Using Segment-Wise Time Series Analysis 📈
+# Forecasting Customer Behavior Using Segment-Wise Time Series Analysis 
 
 ---
 
 ## About the Project & Motivation 🎯
-This project is born out of a commitment to bridge the gap between **Theory ** and **Practice **. I aimed to conduct a hands-on **Replication** of the methodology inspired by the original research paper, reflecting theoretical frameworks into a functional, real-world **Implementation**. 
+This project is born out of a commitment to bridge the gap between **Theory** and **Practice**. I aimed to conduct a hands-on **Replication** of the methodology inspired by the original research paper, reflecting theoretical frameworks into a functional, real-world **Implementation**. 
 
 By replicating the proposed **Segment-Wise-Customer-Wise (SWCW)** approach, this repository demonstrates how complex mathematical models can be translated into actionable **Business Insights** within the retail domain.
 
