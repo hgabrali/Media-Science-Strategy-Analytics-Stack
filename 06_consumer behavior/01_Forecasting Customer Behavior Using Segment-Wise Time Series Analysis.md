@@ -50,16 +50,22 @@ Models are evaluated using:
 
 * **Root Mean Square Error (RMSE):**
   
-    $$RMSE = \sqrt{\frac{1}{n}\sum_{t=1}^{n}(\hat{y}_{t}-y_{t})^{2}}$$
+  
+$$RMSE = \sqrt{\frac{1}{n}\sum_{t=1}^{n}(\hat{y}_{t}-y_{t})^{2}}$$
+  
   
 * **Symmetric Mean Absolute Percentage Error (SMAPE):**
+
+$$SMAPE = \frac{1}{n}\sum_{t=1}^{n}\frac{|\hat{y}_{t}-y_{t}|}{\frac{|\hat{y}_{t}|+|y_{t}|}{2}}$$
   
-    $$SMAPE = \frac{1}{n}\sum_{t=1}^{n}\frac{|\hat{y}_{t}-y_{t}|}{\frac{|\hat{y}_{t}|+|y_{t}|}{2}}$$
 
 ---
 
 ## 5. Executive Summary 💼
-Bu çalışma, akademik bir metodolojinin (SWCW) teorik çerçevesini alıp gerçek dünya verisi üzerinde çalışan bir sisteme dönüştürme motivasyonuyla hazırlanmıştır. **Karmaşıklık Değişmezliğine Sahip Mesafe (CID)** ve **Bireysel ARIMA** modelleri kullanılarak, genelleyici yaklaşımların aksine, her bir müşterinin özgün harcama karakteristiği korunmuştur. Bu sayede perakende sektörü için çok daha hassas ve segment odaklı finansal tahminler elde edilmiştir.
+
+This study transforms the academic SWCW framework into an operational system for real-world data. By leveraging CID and Individual ARIMA models, we preserve unique customer spending behaviors rather than using generalized models, resulting in superior precision and segment-focused financial forecasting in retail.
+
+* Bu çalışma, akademik bir metodolojinin (SWCW) teorik çerçevesini alıp gerçek dünya verisi üzerinde çalışan bir sisteme dönüştürme motivasyonuyla hazırlanmıştır. **Karmaşıklık Değişmezliğine Sahip Mesafe (CID)** ve **Bireysel ARIMA** modelleri kullanılarak, genelleyici yaklaşımların aksine, her bir müşterinin özgün harcama karakteristiği korunmuştur. Bu sayede perakende sektörü için çok daha hassas ve segment odaklı finansal tahminler elde edilmiştir.
 
 ---
 
