@@ -3,7 +3,7 @@
 ---
 
 ## About the Project & Motivation 🎯
-This project is born out of a commitment to bridge the gap between **Theory** and **Practice**. I aimed to conduct a hands-on **Replication** of the methodology inspired by (the original research paper)(https://github.com/hgabrali/Media-Science-Strategy-Analytics-Stack/blob/main/06_consumer%20behavior/Articals/01_Forecasting%20of%20Customer%20Behavior%20Using%20Time%20Series%20Analysis.pdf), reflecting theoretical frameworks into a functional, real-world **Implementation**. 
+This project is born out of a commitment to bridge the gap between **Theory** and **Practice**. I aimed to conduct a hands-on **Replication** of the methodology inspired by [the original research paper](https://github.com/hgabrali/Media-Science-Strategy-Analytics-Stack/blob/main/06_consumer%20behavior/Articals/01_Forecasting%20of%20Customer%20Behavior%20Using%20Time%20Series%20Analysis.pdf), reflecting theoretical frameworks into a functional, real-world **Implementation**. 
 
 By replicating the proposed **Segment-Wise-Customer-Wise (SWCW)** approach, this repository demonstrates how complex mathematical models can be translated into actionable **Business Insights** within the retail domain.
 
