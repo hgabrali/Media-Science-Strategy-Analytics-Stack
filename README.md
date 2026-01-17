@@ -22,3 +22,12 @@ media-science-stack/
 ├── 04_programmatic_bidding/     # CTR Prediction & Bid Optimization Algorithms
 ├── 05_brand_sentiment/          # NLP for Brand Lift & Social Listening
 └── data/                        # Sample datasets (anonymized)
+```
+
+
+## 📚 References & Academic Literature
+
+* [RG](https://www.rajivgopinath.com/)
+* [A data science-based marketing decision support system for brand
+management](https://www.businessperspectives.org/images/pdf/applications/publishing/templates/article/assets/18030/IM_2023_02_Chornous.pdf)
+* [Using Data Sciences in Digital Marketing: Framework, methods, and performance metrics](https://pmc.ncbi.nlm.nih.gov/articles/PMC7428685/pdf/main.pdf)
