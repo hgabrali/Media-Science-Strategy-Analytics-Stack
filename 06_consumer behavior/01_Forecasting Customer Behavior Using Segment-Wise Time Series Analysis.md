@@ -1,6 +1,6 @@
 # Forecasting Customer Behavior Using Segment-Wise Time Series Analysis 📈
 
-This repository contains a replication and implementation of the methodology proposed in the study: **"Forecasting of Customer Behavior Using Time Series Analysis"**. The project focuses on predicting future customer behavior (Monetary value) by combining **Time Series Clustering (Zaman Serisi Kümeleme)** with **Segment-Wise-Customer-Wise (SWCW) Forecasting (Segment Bazlı-Müşteri Bazlı Tahminleme)**.
+This repository contains a replication and implementation of the methodology proposed in the study: **"Forecasting of Customer Behavior Using Time Series Analysis"**. The project focuses on predicting future customer behavior (Monetary value) by combining **Time Series Clustering** with **Segment-Wise-Customer-Wise (SWCW) Forecasting (Segment Bazlı-Müşteri Bazlı Tahminleme)**.
 
 ---
 
@@ -22,23 +22,24 @@ The implementation follows a rigorous structured methodology illustrated in the 
 
 
 
-### Phase A: Preprocessing (Ön İşleme)
-1.  **Temporal Splitting (Zamansal Bölümleme):** Transactional data is aggregated into weekly time intervals to form consistent time series data.
-2.  **Target Selection (Hedef Seçimi):** Filtering for "active customers" who have transactions across all time points to ensure data continuity.
-3.  **Outlier Removal (Aykırı Değer Temizliği):** Utilizing standard deviation-based anomaly detection (**Standart Sapma Tabanlı Anomali Tespiti**) to mitigate the impact of extreme values.
-4.  **Normalization (Normalizasyon):** Applying Min-Max normalization to bring all customer series into a comparable range $[0, 1]$.
+### Phase A: Preprocessing
+1.  **Temporal Splitting:** Transactional data is aggregated into weekly time intervals to form consistent time series data.
+2.  **Target Selection:** Filtering for "active customers" who have transactions across all time points to ensure data continuity.
+3.  **Outlier Removal:** Utilizing standard deviation-based anomaly detection (**Standart Sapma Tabanlı Anomali Tespiti**) to mitigate the impact of extreme values.
+4.  **Normalization:** Applying Min-Max normalization to bring all customer series into a comparable range $[0, 1]$.
 
-### Phase B: Time Series Clustering (Zaman Serisi Kümeleme)
-To handle behavioral diversity, customers are grouped using **Complexity-Invariant Distance (CID) (Karmaşıklık Değişmezliğine Sahip Mesafe)**.
+### Phase B: Time Series Clustering
+To handle behavioral diversity, customers are grouped using **Complexity-Invariant Distance (CID)**.
 
 * **CID Measure:** Adjusts standard Euclidean distance by a complexity correction factor to better account for temporal fluctuations.
-* **Algorithm:** Agglomerative Hierarchical Clustering (**Yığınsal Hiyerarşik Kümeleme**) using **Ward’s Method** to minimize within-cluster variance.
+* **Algorithm:** Agglomerative Hierarchical Clustering  using **Ward’s Method** to minimize within-cluster variance.
+* Neden Önemli?: İki müşteri aynı toplam harcamayı yapmış olabilir, ancak biri düzenli aralıklarla harcama yaparken diğeri düzensiz (stokastik) harcama yapıyor olabilir. CID bu farkı algılayarak, sadece "miktar" bazlı değil, "davranış biçimi" bazlı bir kümeleme yapmanıza olanak tanır.
 
 ### Phase C: Segment-Wise-Customer-Wise (SWCW) Forecasting
 Unlike standard aggregate methods, the SWCW approach follows these steps:
-1.  **Individual Modeling (Bireysel Modelleme):** An optimal **ARIMA** $(p, d, q) \times (P, D, Q)_m$ model is fitted for every individual customer within a cluster.
-2.  **Individual Prediction (Bireysel Tahmin):** Each model generates a forecast for the test period.
-3.  **Segment Aggregation (Segment Birleştirme):** The final segment forecast is the mean of all individual customer predictions within that specific cluster.
+1.  **Individual Modeling:** An optimal **ARIMA** $(p, d, q) \times (P, D, Q)_m$ model is fitted for every individual customer within a cluster.
+2.  **Individual Prediction:** Each model generates a forecast for the test period.
+3.  **Segment Aggregation:** The final segment forecast is the mean of all individual customer predictions within that specific cluster.
 
 ---
 
@@ -47,10 +48,12 @@ Models are evaluated using two primary metrics to ensure robustness against diff
 
 ### Root Mean Square Error (RMSE)
 Used to measure the magnitude of the error.
+
 $$RMSE = \sqrt{\frac{1}{n}\sum_{t=1}^{n}(\hat{y}_{t}-y_{t})^{2}}$$
 
 ### Symmetric Mean Absolute Percentage Error (SMAPE)
 Used for relative error analysis, providing a percentage-based evaluation.
+
 $$SMAPE = \frac{1}{n}\sum_{t=1}^{n}\frac{|\hat{y}_{t}-y_{t}|}{\frac{|\hat{y}_{t}|+|y_{t}|}{2}}$$
 
 ---
@@ -65,7 +68,7 @@ $$SMAPE = \frac{1}{n}\sum_{t=1}^{n}\frac{|\hat{y}_{t}-y_{t}|}{\frac{|\hat{y}_{t}
 
 ---
 
-## 6. Executive Summary (Yönetici Özeti) 💼
+## 6. Executive Summary
 Bu çalışma, müşteri davranışlarını tek bir blok olarak tahmin etmek yerine, benzer harcama kalıplarına sahip müşterileri **Karmaşıklık Değişmezliğine Sahip Mesafe (CID)** yöntemiyle gruplandırır. Her müşteri için özel bir **ARIMA** modeli oluşturularak yapılan tahminler, segment bazında birleştirilir. Bu yaklaşım, genel modellerin kaçırdığı mikro trendleri yakalayarak perakende stratejilerinde daha isabetli finansal öngörüler (Monetary Value Forecasting) sağlar.
 
 ---
