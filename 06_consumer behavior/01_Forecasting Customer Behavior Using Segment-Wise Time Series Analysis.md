@@ -1,6 +1,6 @@
 # Forecasting Customer Behavior Using Segment-Wise Time Series Analysis 📈
 
-This repository contains a replication and implementation of the methodology proposed in the study: **"Forecasting of Customer Behavior Using Time Series Analysis"**. The project focuses on predicting future customer behavior (Monetary value) by combining **Time Series Clustering** with **Segment-Wise-Customer-Wise (SWCW) Forecasting (Segment Bazlı-Müşteri Bazlı Tahminleme)**.
+This project contains a replication and implementation of the methodology proposed in the study: **"Forecasting of Customer Behavior Using Time Series Analysis"**. The project focuses on predicting future customer behavior (Monetary value) by combining **Time Series Clustering** with **Segment-Wise-Customer-Wise (SWCW) Forecasting (Segment Bazlı-Müşteri Bazlı Tahminleme)**.
 
 ---
 
