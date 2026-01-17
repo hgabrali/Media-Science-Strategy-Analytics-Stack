@@ -156,3 +156,79 @@ The implementation confirms that behavioral segmentation combined with individua
 ### Business Insights (İş Analizleri)
 * **The "So What?":** By using SWCW, the marketing department can predict the future "Monetary" value of a specific segment with ~35% more accuracy than general averages. This allows for hyper-personalized discount campaigns.
 * **Scalability:** The model uses individual ARIMA parameters, meaning as the customer base grows, the segments remain distinct and manageable.
+
+
+---
+
+# Technical Comparative Analysis: Dataset Structural Discrepancy
+
+<img width="731" height="701" alt="image" src="https://github.com/user-attachments/assets/e0f5418b-a2f5-4afa-a564-8141c48f7568" />
+
+<img width="665" height="484" alt="image" src="https://github.com/user-attachments/assets/61559271-9441-4a9d-9909-066e54e57730" />
+
+<img width="1414" height="525" alt="image" src="https://github.com/user-attachments/assets/94cde0db-79cf-4134-9659-f08f35243ede" />
+
+<img width="1405" height="498" alt="image" src="https://github.com/user-attachments/assets/7f7ae873-5297-4d07-9ecb-98520319f65b" />
+
+
+## 📝 Executive Summary 
+This analysis delineates the fundamental engineering and statistical drivers behind the structural differences between the **"Actual"** data presented in the reference paper (Bank POS transactions) and the **Online Retail II** dataset. The divergence is primarily attributed to sectoral stability, sample size effects, and specific mathematical filtering.
+
+Bu analiz, referans makaledeki (Banka POS işlemleri) "Gerçek" (Actual) veriler ile "Online Retail II" veri seti arasındaki yapısal farklılıkların temel mühendislik ve istatistiksel itici güçlerini ana hatlarıyla belirtmektedir. Farklılık temel olarak **Sektörel Kararlılık (Sectoral Stability)**, **Büyük Sayılar Kanunu (Law of Large Numbers)** etkileri ve **Aktif Müşteriler (Active Customers)** üzerinde uygulanan spesifik matematiksel filtrelemeden kaynaklanmaktadır.
+
+---
+
+## 🔍 Detailed Technical Analysis 
+
+### 1. Sectoral Divergence 
+The paper utilizes bank POS transaction data, specifically filtering for a **"specific guild"** rather than analyzing the entire bank portfolio.
+
+* **Paper Data :** They likely selected a sector with routine consumption (e.g., supermarket chains or pharmacies) where weekly spending habits are highly stable.
+* **Online Retail II:** This dataset primarily consists of giftware and general retail. These sectors are highly sensitive to promotions, seasonal events (Mother’s Day, Christmas), and stock availability, which creates significant spikes and **Volatility ** in the time series.
+
+### 2. The Law of Large Numbers 
+The "Actual" line in the visualizations represents the **Centroid (Merkez/Ortalama)** of all customers within that specific cluster.
+
+* **Paper Data :** The study includes 123,000 active customers with continuous transactions over 44 weeks. With such a large **Sample Size (Örneklem Büyüklüğü)**, individual **Outlier Behaviors (Aykırı Davranışlar)** neutralize each other, making the "average" curve significantly smoother.
+* **Your Data (Sizin Veriniz):** In the Online Retail II set, the number of customers purchasing every single week for 44 weeks is likely much lower. As the sample size decreases, a single large order from one customer can disproportionately pull the cluster average upward, resulting in an **Irregular (Düzensiz)** appearance.
+
+### 3. Rigidity of the "Active Customer" Definition 
+The paper constructs its methodology exclusively on "customers who have transactions at all time points."
+
+* This strict filtering eliminates **Temporal Gaps** in the data.
+* If your dataset includes customers with **"Silent Weeks"**, these appear as sudden drops or irregularities in the time series, making the overall trend harder to model.
+
+### 4. Impact of Complexity-Invariant Distance 
+The paper employs **Complexity-Invariant Distance (CID)** as the primary metric for clustering, which is more robust than traditional **Euclidean Distance**.
+
+* **Metric Characteristic:** CID evaluates the complexity (fluctuation pattern) of the series rather than just the magnitude of values.
+* **Mathematical Representation:**
+* 
+$$d_{CID}(X,Y) = CF(X,Y) \cdot d_{L2}(X,Y)$$
+
+* **Result (Sonuç):** This allows the authors to sharply isolate "regular spenders" into one cluster and "irregular spenders" into another. If the distance metric used does not capture these **Complexity Nuances**, clustering results may remain heterogeneous.
+
+
+
+---
+
+## 📈 Comparative Analysis Table 
+
+| Analysis Area | Problems & Components | Technical Detail & Importance | Solution Methods | Tools & Tests |
+| :--- | :--- | :--- | :--- | :--- |
+| **Data Source** | Sectoral Volatility  | Retail vs. POS Necessity; dictates baseline noise. | Feature Engineering / Seasonal Adjustment | Pandas / Statsmodels |
+| **Sampling** | Law of Large Numbers ) | Small samples lead to erratic mean curves. | Increasing N or Weighted Averaging | SciPy Stats / NumPy |
+| **Filtering** | Zero-Transaction Gaps  | "Silent weeks" break ARIMA linearity. | Rigid "Active Customer" Thresholding | Boolean Indexing |
+| **Similarity** | Magnitude vs. Shape  | Euclidean distance ignores temporal complexity. | Complexity-Invariant Distance (CID) | tslearn / CID Implementation |
+
+---
+
+## 💡 Business Insights 
+
+* **The "So What?":** The "irregularity" in your dataset is not necessarily a failure of the model but a reflection of the **Retail Sector's Stochasticity**. While the paper deals with **"Predictable Habits"** (Bank POS), you are dealing with **"Impulse/Event-Driven Habits"** (Online Retail).
+* **Actionable Strategy:** To achieve a "smoother" actual line for your report, consider applying a **Moving Average (MA - Hareketli Ortalama)** filter or a **Savitzky-Golay Filter** to the centroids to highlight the underlying trend over the noise, or further segmenting customers by **"Shopping Frequency Tiers"**.
+
+---
+
+
+
