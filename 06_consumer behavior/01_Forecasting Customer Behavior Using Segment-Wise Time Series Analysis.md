@@ -174,6 +174,8 @@ The implementation confirms that behavioral segmentation combined with individua
 ## 📝 Executive Summary 
 This analysis delineates the fundamental engineering and statistical drivers behind the structural differences between the **"Actual"** data presented in the reference paper (Bank POS transactions) and the **Online Retail II** dataset. The divergence is primarily attributed to sectoral stability, sample size effects, and specific mathematical filtering.
 
+* In the Bank POS study, the "Actual" line is essentially a **low-pass filtered** version of consumer behavior due to the sheer volume of transactions. In Online Retail, we are dealing with **high-entropy data** where individual event-driven impulses dominate the signal.
+
 Bu analiz, referans makaledeki (Banka POS işlemleri) "Gerçek" (Actual) veriler ile "Online Retail II" veri seti arasındaki yapısal farklılıkların temel mühendislik ve istatistiksel itici güçlerini ana hatlarıyla belirtmektedir. Farklılık temel olarak **Sektörel Kararlılık (Sectoral Stability)**, **Büyük Sayılar Kanunu (Law of Large Numbers)** etkileri ve **Aktif Müşteriler (Active Customers)** üzerinde uygulanan spesifik matematiksel filtrelemeden kaynaklanmaktadır.
 
 ---
