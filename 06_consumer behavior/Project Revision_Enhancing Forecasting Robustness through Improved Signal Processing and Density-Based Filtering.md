@@ -1,6 +1,13 @@
 # Project Revision: Enhancing Forecasting Robustness through Improved Signal Processing and Density-Based Filtering
 
+##  Research Methodology (Image 1):
+<img width="1024" height="597" alt="image" src="https://github.com/user-attachments/assets/865f851f-7e02-4fd4-aaae-dbe1e49a8ca1" />
+
+
+## SWCW Forecasting Framework (Image 2) 
+
 <img width="1122" height="626" alt="image" src="https://github.com/user-attachments/assets/c4a0cd71-be24-46d7-a015-033df3bf5fcc" />
+
 
 
 
@@ -10,7 +17,7 @@ This document provides a technical comparison between the general research metho
 
 ---
 
-## 🔍 Comparative Technical Analysis
+##  Comparative Technical Analysis
 
 | Analysis Area | Research Methodology (Image 1) | SWCW Forecasting Framework (Image 2) |
 | :--- | :--- | :--- |
@@ -22,7 +29,7 @@ This document provides a technical comparison between the general research metho
 
 ---
 
-## 🏗️ Structural Breakdown
+##  Structural Breakdown
 
 ### 1. Methodology Evolution
 While Image 1 provides the structural skeleton for a scientific experiment, Image 2 acts as the **robustness layer**. It replaces standard "Outlier Removal" with "Advanced Signal Sanitation" to ensure that the integration of credit notes and returns are treated as corrective signals rather than disruptive noise.
@@ -45,22 +52,6 @@ The following table summarizes the performance outcomes as defined in the framew
 ---
 
 > **Technical Note:** The implementation of the **Savitzky-Golay Filter** in the SWCW framework is critical for reconstructing the trend line without the phase shift typically introduced by moving averages, preserving the temporal integrity of retail signals.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
