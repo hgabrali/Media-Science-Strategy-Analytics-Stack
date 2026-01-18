@@ -180,6 +180,10 @@ This technical revision delineates a robust engineering framework designed to mi
 
 # Business Insights: Strategic Interpretation of Reconstructed Customer Signals
 
+
+<img width="1214" height="633" alt="image" src="https://github.com/user-attachments/assets/1b821954-b887-44a3-bdf0-5285e2344f8c" />
+
+
 ##  Executive Summary
 
 The final synthesis of our **Segment-Wise-Customer-Wise (SWCW)** forecasting reveals a critical dichotomy within the Online Retail II portfolio. While the overall model successfully captures the **Latent Behavioral Trends** of stable segments (Clusters 3 & 4), it exposes high **Stochasticity** (randomness) in specific outlier segments (Clusters 1 & 2). 
@@ -216,7 +220,6 @@ The failure of sMAPE in Cluster 1 is a diagnostic signal of **Extreme Data Spars
 
 The use of **Signal Reconstruction (Savitzky-Golay)** in Phase 7 is not merely for visualization; it is an engineering necessity to reveal **Latent Habitual Value**. 
 
-![Reconstructed vs Raw Signal Comparison]
 
 $$d_{CID}(X,Y) = CF(X,Y) \cdot d_{L2}(X,Y)$$
 
@@ -238,20 +241,6 @@ By smoothing the "Actual" line, we prove that while the model cannot predict a s
 To further improve **Predictive Reliability** in the stochastic segments (1 & 2), we recommend moving beyond linear ARIMA in the next iteration. Potential upgrades include:
 * Integrating **Exogenous Variables** (holidays, discount rates).
 * Testing **Non-Linear Architectures** (e.g., LSTM or GRU) for high-variance clusters.
-
-![Next-Gen Forecasting Architecture Placeholder]
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
