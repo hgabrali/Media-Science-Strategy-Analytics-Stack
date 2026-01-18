@@ -1,57 +1,98 @@
-# Project Revision: Enhancing Forecasting Robustness through Improved Signal Processing and Density-Based Filtering 
+
+
+
+
+
+
+
+
+
+
+
+
+
+----
+## TURKISH VERSION:
+
+# Proje Revizyonu: Sinyal İşleme ve Yoğunluk Temelli Filtreleme Yoluyla Tahmin Sağlamlığının Artırılması (Project Revision: Enhancing Forecasting Robustness through Improved Signal Processing and Density-Based Filtering)
+
+## 📈 Yönetici Özeti (Executive Summary)
+
+Bu teknik revizyon, **Online Retail II** veri setinde doğal olarak bulunan yüksek **Rastlantısallığı (Stochasticity)** azaltmak için tasarlanmış sağlam bir mühendislik çerçevesini tanımlar. Standart bir toplu yaklaşımdan **Segment Bazlı-Müşteri Bazlı (Segment-Wise-Customer-Wise - SWCW)** metodolojisine geçiş yaparak, mevsimsel "Pazar Statikliğinden" **"Örtük Davranışsal Sinyali" (Latent Behavioral Signal)** izole etmeyi hedefliyoruz.
+
+### Temel İş Değeri İtici Güçleri (Key Business Value Drivers):
+* **Hassas Hedefleme (Precision Targeting):** Hacim odaklı metriklerin ötesine geçerek **Alışkanlık Yoğunluğuna (Habitual Density)** odaklanmak, pazarlama ve tedarik zinciri kaynaklarının öngörülebilir ve yüksek değerli kohortlara ayrılmasını sağlar.
+* **Operasyonel Bütünlük (Operational Integrity):** Gelişmiş sinyal sanitasyonu (**Winsorizasyon (Winsorization)** ve **Lineer İnterpolasyon (Linear Interpolation)**), uç değerlerin (outliers) neden olduğu yapay finansal projeksiyon şişkinliklerini önler.
+* **Tahmin Güvenilirliği (Predictive Reliability):** Gürültülü verilerdeki **Ölçek Uyumsuzluğunu (Scale-Mismatch)** çözerek, doğrudan optimize edilmiş envanter devir hızına dönüşen daha düşük bir **SMAPE** değerine ulaşırız.
 
 ---
 
-## 📈 Executive Summary 
+## 🏗️ Teknik Mimari: Uçtan Uca Boru Hattı (The End-to-End Pipeline)
 
-The objective of this revision is to refine our retail forecasting engine to better navigate the volatile nature of the **Online Retail II** dataset. Initial applications of the **SWCW (Segment-Wise-Customer-Wise)** methodology encountered challenges due to "silent weeks" and random market fluctuations, which traditionally skewed our accuracy metrics.
+### Aşama 1: Veri Alımı ve Altyapı Başlatma (Data Ingestion & Infrastructure Initialization - Obtain)
+* **Ortam Orkestrasyonu (Environment Orchestration):** Yüksek performanslı hesaplama kaynaklarının (GPU/CPU) konfigürasyonu ve özel bağımlılıkların (**pmdarima**, **statsmodels**) konuşlandırılması.
+* **Kütüphane Senkronizasyonu (Library Synchronization):** Sinyal işleme (**scipy.signal**), istatistiksel modelleme (**statsmodels**) ve makine öğrenmesi (**sklearn**) için temel hesaplama çerçevelerinin yüklenmesi.
+* **Veri Edinimi ve Ön İnceleme (Data Acquisition & Preliminary Inspection):** İlk veri alımının gerçekleştirilmesi ve açıklayıcı istatistiksel özetler (**`.describe()`**) ve yapısal meta veri analizi (**`.info()`**) yoluyla veri şeması bütünlüğünün doğrulanması.
 
-**Key Business Value Additions:**
-* **Reduced Noise:** By implementing advanced signal processing, we filter out "market static," allowing for a clearer view of true consumer demand.
-* **Improved Accuracy:** Transitioning from simple activity thresholds to **Habitual Density** filtering ensures that our models are trained on reliable, consistent customer behavior rather than one-off outliers.
-* **Data Integrity:** Moving away from zero-filling prevents the artificial inflation of complexity metrics, leading to more realistic financial projections and lower error rates ($SMAPE$).
+### Aşama 2: Gelişmiş Veri Temizleme ve Özellik Düzeltme (Advanced Data Sanitation & Feature Rectification - Scrub)
+* **Veri Sanitasyonu (Data Sanitization):**
+    * **Tekilleştirme (Deduplication):** Otokorelasyon sapmasını (**Autocorrelation bias**) önlemek için Fatura, Stok Kodu ve Müşteri Kimliğine dayalı yinelenen girişlerin kaldırılması.
+    * **Net Gelir Mantığı (Net Revenue Logic):** Toplam Tutarın (**TotalAmount**) $Quantity \times Price$ olarak hesaplandığı bir "İade Stratejisi" uygulanarak, kredi notlarının ve iadelerin izole gürültü yerine eklemeli sinyal düzeltmeleri olarak ele alınması.
+* **Aykırı Değer Azaltma (Outlier Mitigation):** Ağır kuyruklu dağılımların (**Heavy-tailed distributions**) ve anormal kurumsal toplu alımların etkisini nötralize etmek için **Winsorizasyon (Winsorization)** (%95 persentil sınırı) uygulaması.
+* **Temizlik Sonrası Dağılım Analizi (Post-Scrub Distribution Analysis):** Temizlenmiş özelliklerin istatistiksel doğrulaması. Veri setinin normalleşmesini ve modellemeye hazır olduğunu teyit etmek için **"Harcama Dağılımı" (Spending Distribution)** ve **"İade Oranı" (Return Ratio)** görsellerinin oluşturulması.
+
+
+
+### Aşama 3: Stokastik Sinyal Filtreleme (Stochastic Signal Filtering - Engineering Part 1)
+* **Alışkanlık Yoğunluğu Eşikleme (Habitual Density Thresholding):** İşlem yoğunluğu $\ge \%70$ olan müşteriler için filtreleme.
+* **Mühendislik Mantığı (Engineering Logic):** Bu adım, sonraki istatistiksel testlerin yalnızca "modellenebilir" sinyaller üzerinde yürütülmesini sağlamak ve **Sinyal-Gürültü Oranını (Signal-to-Noise Ratio - SNR)** önemli ölçüde artırmak için önceliklendirilmiştir.
+
+### Aşama 4: Zamansal Keşifçi Veri Analizi (Temporal Exploratory Data Analysis - Explore)
+* **Derin Zamansal EDA (Deep Temporal EDA):**
+    * **Durağanlık Değerlendirmesi (Stationarity Assessment):** Entegrasyon sırasını (**$d$ parametresi**) belirlemek için **Genişletilmiş Dickey-Fuller (ADF) Testi** uygulaması.
+    * **Derece Seçimi (Order Selection):** **$p$ (Oto-regresif)** ve **$q$ (Hareketli Ortalama)** bileşenlerini tanımlamak için **ACF/PACF** grafiklerinin analizi.
+    * **Zaman Serisi Ayrıştırma (Time-Series Decomposition):** Mevsimsel ARIMA modelinin hiperparametre ayarlarını bilgilendirmek için **Trend, Mevsimsellik ($m, S$) ve Artıkları (Residuals)** izole etme.
+
+### Aşama 5: Hibrit Davranışsal Kümeleme ve Çok Görünümlü Hizalama (Hybrid Behavioral Clustering - Engineering Part 2)
+* **"RFM Köprüsü" (The RFM Bridge):**
+    * İş mantığı katmanı sağlamak için **RFM (Recency, Frequency, Monetary)** metriklerinin hesaplanması.
+    * Zamansal şekil benzerliğini yakalamak için **Karmaşıklık-Değişmez Mesafe (Complexity-Invariant Distance - CID)** matrisinin hesaplanması.
+    * **Özellik Ölçeklendirme (Feature Scaling):** Boyutsal eşitliği sağlamak için **MinMaxScaler** veya **StandardScaler** yoluyla farklı metrik ölçeklerinin birleştirilmesi.
+* **Hiyerarşik Kümeleme Derinliği (Hierarchical Clustering Depth):**
+    * Optimal $k$-küme sayısını belirlemek için **Dirsek Yöntemi (Elbow Method)** ve **Silüet Analizi (Silhouette Analysis)** kullanımı.
+    * Müşteri davranış segmentlerini tanımlamak için **K-Means++** veya **Ward Hiyerarşik Kümeleme** uygulaması.
+
+### Aşama 6: SWCW Tahminleme ve Doğrulama (SWCW Predictive Modeling & Validation - Model & Evaluate)
+* **Segment Bazlı-Müşteri Bazlı Tahminleme (SWCW Forecasting):**
+    * Her segmentteki her bir müşteri için yerel hiperparametre optimizasyonuna izin veren **auto_arima** döngülerinin iteratif yürütülmesi.
+* **Çok Metrikli Değerlendirme (Multi-Metric Evaluation):** Segment düzeyinde **SMAPE, MAE ve RMSE** kullanarak performans kıyaslaması (**Benchmarking**).
+* **Kök Neden Hata Analizi (Root Cause Error Analysis):** Gelecekteki iterasyonları iyileştirmek için segmente özgü başarısızlıkların (örneğin, Küme X'in neden ARIMA lineerliğinden saptığı) belirlenmesi.
+
+### Aşama 7: Sinyal Yeniden Yapılandırma ve Görsel Sentez (Interpret)
+* **Rafine Sinyal Yumuşatma (Refined Signal Smoothing):** Faz kayması yaratmadan yüksek frekanslı perakende gürültüsünü gidererek "Gerçek" trend çizgisini yeniden oluşturmak için **Savitzky-Golay Filtresi** uygulaması.
+* **Yorumlayıcı Görselleştirme (Interpretive Visualization):** Çeşitli davranış segmentlerinde tahmin sapmasını vurgulayan, yayın standartlarında **"Gerçek vs. Tahmin"** grafiklerinin sunumu.
+
+---
+
+## 📊 Karşılaştırmalı Analiz Tablosu (Comparative Analysis Table)
+
+| Analiz Alanı | Problemler & Bileşenler | Teknik Detay & Önem | Çözüm Yöntemleri | Araçlar & Testler |
+| :--- | :--- | :--- | :--- | :--- |
+| **Veri Kalitesi** | Gürültü ve Aykırı Değerler | Tahmin sapmasını (bias) azaltır | Winsorization, Net Revenue Logic | Scipy, Pandas |
+| **Sinyal Gücü** | Düşük SNR (Signal-to-Noise) | Modellenebilir veriyi ayırır | Habitual Density Thresholding | Custom Filters, ADF Test |
+| **Segmentasyon** | Davranışsal Homojenlik | Tahmin doğruluğunu artırır | RFM & CID Matrix Hybrid | K-Means++, Silhouette |
+| **Modelleme** | Ölçek Uyumsuzluğu | Yerel paternleri yakalar | SWCW (Segment-Wise) | Auto-ARIMA, Statsmodels |
 
 ---
 
-## 🏗️ Technical Architecture & Refinement
+## 💡 İş İçgörüleri (Business Insights)
 
-This revised implementation addresses structural gaps identified in the initial application of the $SWCW$ methodology. While the theoretical framework performs optimally on stable transaction data, retail environments introduce significant **stochasticity** (rastlantısallık) and "silent weeks" that can distort distance metrics.
-
-### 🛠️ Core Architectural Enhancements
-
-1.  **Refined Active Customer Selection:** * Transitioning from simple activity thresholds to **"Habitual Density"** filtering.
-    * **Goal:** To ensure only customers with consistent behavioral patterns are modeled, improving the reliability of the training set.
-
-2.  **Advanced Signal Processing:** * Integrating a post-clustering smoothing layer.
-    * **Methods:** Implementation of **Moving Average** or **Savitzky-Golay** filters to mitigate retail-specific volatility and high-frequency noise.
-
-3.  **Linear Imputation Strategy:** * Deprecating the standard `.fillna(0)` approach.
-    * **Impact:** Zero-filling was found to artificially inflate **Complexity-Invariant Distance ($CID$)** calculations by creating extreme gradients. We now utilize **Linear Interpolation** to maintain time-series linearity.
+1.  **"So What?" (Peki ya Sonra?):** Rastlantısallığı %70 yoğunluk eşiğiyle filtreleyerek, pazarlama bütçesinin boşa harcandığı "gürültülü" müşteri grubundan kaçınılmıştır. Bu, **Müşteri Edinme Maliyeti (CAC)** verimliliğini doğrudan artırır.
+2.  **Stratejik Stok Yönetimi:** Savitzky-Golay filtresi ile temizlenen trendler, ani talep sıçramalarına (anomaliler) karşı aşırı stok (overstocking) yapılmasını önleyerek depo maliyetlerini düşürür.
+3.  **Kişiselleştirilmiş Tahmin:** Her segmentin kendi ARIMA parametrelerine sahip olması, "herkese uyan tek model" yaklaşımının getirdiği genel hata payını minimize eder.
 
 ---
 
-## 🔬 Technical Update: Improving Model Alignment
+## 📁 Ekler (Appendix)
 
-Following a comparative review of initial results, this framework presents a modernized approach to financial forecasting. The primary objective is to resolve the scale-mismatch and noise issues observed in previous iterations.
-
-### 🔄 Comparison of Improvements
-
-| Analysis Area | Problem Identified | Technical Solution | Expected Outcome |
-| :--- | :--- | :--- | :--- |
-| **Data Imputation** | Zero-filling creating extreme gradients. | **Linear Interpolation** | Prevention of biased $CID$ clustering. |
-| **Stochasticity** | High-frequency "spikes" in retail data. | **Signal Smoothing** (Smoothing Layer) | Stabilization of the input signal for $ARIMA$. |
-| **Precision** | Scale-mismatch in noisy data segments. | **Segment-specific $ARIMA$** | Lower $SMAPE$ and higher forecasting precision. |
-
----
-
-## 📎 Appendix (Ekler): Technical Deep Dive
-
-### Data-Centric Bottlenecks
-The goal of this "reboot" is to transform the theoretical $SWCW$ methodology into a resilient system capable of handling real-world market irregularities. 
-
-* **$CID$ (Complexity-Invariant Distance):** Used to measure the similarity between time series while accounting for complexity. The previous zero-filling method created "artificial complexity," which is now resolved through linear imputation.
-* **$SMAPE$ (Symmetric Mean Absolute Percentage Error):** Our primary metric for success. By aligning the preprocessing pipeline with the inherent complexity of retail time series, we aim for a significant reduction in this value.
-* **$ARIMA$ Tuning:** Implementation of segment-specific $ARIMA$ models, tuned specifically after robust density-based customer filtering.
-
----
-> **Note:** This documentation reflects the transition from a theoretical framework to a production-ready resilient forecasting system.
+Bu projenin teknik detayları, kullanılan matematiksel formüller ve hiperparametre optimizasyon süreçleri kod blokları içerisinde `technical-appendix.md` dosyasında saklanmaktadır.
