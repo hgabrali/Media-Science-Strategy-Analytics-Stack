@@ -122,6 +122,9 @@ This technical revision delineates a robust engineering framework designed to mi
     * **Feature Scaling:** Unification of diverse metric scales through `MinMaxScaler` or `StandardScaler` to ensure dimensional parity.
 * **Hierarchical Clustering Depth:**
     * Deployment of the **Elbow Method** and **Silhouette Analysis** to determine the optimal $k$-clusters.
+ 
+      <img width="645" height="369" alt="image" src="https://github.com/user-attachments/assets/a4612e4f-1bb0-496b-8e75-eb20d6d4f91e" />
+
     * Application of **K-Means++** or **Ward’s Hierarchical Clustering** to define customer behavioral segments.
 
 ### Phase 6: SWCW Predictive Modeling & Validation (Model & Evaluate) 🤖
