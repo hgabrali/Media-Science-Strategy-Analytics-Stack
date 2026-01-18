@@ -93,6 +93,9 @@ This technical revision delineates a robust engineering framework designed to mi
 
 * **Engineering Logic:** This step is prioritized to ensure that subsequent statistical tests are executed only on "model-able" signals, significantly increasing the **Signal-to-Noise Ratio (SNR)**.
 
+<img width="920" height="558" alt="image" src="https://github.com/user-attachments/assets/3677817f-d316-49de-a851-a848984d665f" />
+
+
 ### Phase 4: Temporal Exploratory Data Analysis (Explore) 🕰️
 * **Deep Temporal EDA (T-EDA):**
     * **Stationarity Assessment:** Execution of the **Augmented Dickey-Fuller (ADF)** Test to determine the integration order ($d$ parameter).
