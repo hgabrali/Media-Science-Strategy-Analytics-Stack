@@ -139,10 +139,17 @@ This technical revision delineates a robust engineering framework designed to mi
 
 
 ### Phase 6: SWCW Predictive Modeling & Validation (Model & Evaluate) 🤖
+
+<img width="1104" height="387" alt="image" src="https://github.com/user-attachments/assets/320d7efa-ecbd-4fac-a360-d58c3ff720cf" />
+
+<img width="1082" height="392" alt="image" src="https://github.com/user-attachments/assets/5a5d3d60-eda2-4b49-9d63-d2dd773d7373" />
+
 * **Segment-Wise-Customer-Wise (SWCW) Forecasting:**
     * Iterative execution of `auto_arima` loops for every individual customer within each segment, allowing for local hyperparameter optimization.
 * **Multi-Metric Evaluation:** Benchmarking performance using **sMAPE**, **MAE**, and **RMSE** at the segment level.
 * **Root Cause Error Analysis:** Identifying segment-specific failures (e.g., why Cluster X deviates from the ARIMA linearity) to refine future iterations.
+
+
 
 ### Phase 7: Signal Reconstruction & Visual Synthesis (Interpret) 📈
 * **Refined Signal Smoothing:** Implementation of the **Savitzky-Golay Filter** to reconstruct the "Actual" trend line by removing high-frequency retail noise without introducing phase shift.
