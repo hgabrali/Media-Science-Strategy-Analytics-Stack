@@ -13,7 +13,7 @@
 
 # Comparative Analysis: Research Methodology vs. SWCW Forecasting Framework
 
-This document provides a technical comparison between the general research methodology (Image 1) and the specialized SWCW (Segment-Wise-Customer-Wise) Forecasting Framework (Image 2). The following analysis highlights the evolution from standard procedural workflows to high-precision engineering frameworks.
+This provides a technical comparison between the general research methodology (Image 1) and the specialized SWCW (Segment-Wise-Customer-Wise) Forecasting Framework (Image 2). The following analysis highlights the evolution from standard procedural workflows to high-precision engineering frameworks.
 
 ---
 
