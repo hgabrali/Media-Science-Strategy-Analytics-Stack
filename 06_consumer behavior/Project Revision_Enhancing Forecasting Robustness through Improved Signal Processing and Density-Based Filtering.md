@@ -1,5 +1,8 @@
 # Project Revision: Enhancing Forecasting Robustness through Improved Signal Processing and Density-Based Filtering
 
+<img width="1122" height="626" alt="image" src="https://github.com/user-attachments/assets/c4a0cd71-be24-46d7-a015-033df3bf5fcc" />
+
+
 ## 📈 Executive Summary
 
 This technical revision delineates a robust engineering framework designed to mitigate the high **Stochasticity** (rastlantısallık) inherent in the Online Retail II dataset. By transitioning from a standard aggregate approach to a **Segment-Wise-Customer-Wise (SWCW)** methodology, we aim to isolate the **"Latent Behavioral Signal"** from seasonal **"Market Static."**
