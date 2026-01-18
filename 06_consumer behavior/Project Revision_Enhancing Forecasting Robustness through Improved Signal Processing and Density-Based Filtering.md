@@ -1,7 +1,9 @@
 # Project Revision: Enhancing Forecasting Robustness through Improved Signal Processing and Density-Based Filtering
 
 ## **Research Methodology (Image 1):**
-<img width="1024" height="597" alt="image" src="https://github.com/user-attachments/assets/865f851f-7e02-4fd4-aaae-dbe1e49a8ca1" />
+
+<img width="1141" height="633" alt="image" src="https://github.com/user-attachments/assets/1e33ed1c-0bc9-4709-b6ab-a13249da51e3" />
+
 
 
 ## **SWCW Forecasting Framework (Image 2):** 
