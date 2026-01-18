@@ -102,7 +102,15 @@ This technical revision delineates a robust engineering framework designed to mi
     * **Order Selection:** Analysis of **ACF/PACF** (Autocorrelation and Partial Autocorrelation) plots to identify the $p$ (Auto-regressive) and $q$ (Moving Average) components.
     * **Time-Series Decomposition:** Isolating Trend, Seasonality ($m, S$), and Residuals to inform the hyperparameter tuning of the seasonal ARIMA model.
 
-![Time Series Decomposition Components]
+<img width="1302" height="390" alt="image" src="https://github.com/user-attachments/assets/df1ea141-4501-47c4-a23a-14d07fb3ef65" />
+
+<img width="1276" height="325" alt="image" src="https://github.com/user-attachments/assets/a6fa602b-b232-450f-86dc-f26377defd30" />
+
+<img width="1287" height="326" alt="image" src="https://github.com/user-attachments/assets/320b3751-b603-4a4f-91b8-bede4c7f4172" />
+
+
+<img width="1173" height="391" alt="image" src="https://github.com/user-attachments/assets/a2d9487c-cce5-4d2c-962c-0767853fc6bc" />
+
 
 ### Phase 5: Hybrid Behavioral Clustering & Multi-View Alignment (Engineering - Part 2) 🧩
 * **The "RFM Bridge" (Hybrid Feature Engineering):**
