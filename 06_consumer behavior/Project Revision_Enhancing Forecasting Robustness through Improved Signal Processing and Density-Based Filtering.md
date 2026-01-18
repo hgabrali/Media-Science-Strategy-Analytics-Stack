@@ -155,6 +155,10 @@ This technical revision delineates a robust engineering framework designed to mi
 * **Refined Signal Smoothing:** Implementation of the **Savitzky-Golay Filter** to reconstruct the "Actual" trend line by removing high-frequency retail noise without introducing phase shift.
 * **Interpretive Visualization:** Final presentation of **"Actual vs. Forecast"** plots in a publication-standard format, highlighting the predictive delta across diverse behavioral segments.
 
+
+
+
+
 ---
 
 ## 🔬 Technical Update: Comparison of Improvements
@@ -166,9 +170,12 @@ This technical revision delineates a robust engineering framework designed to mi
 | **Customer Selection** | Simple activity thresholds were too loose. | **Habitual Density Filtering** | Elimination of "Impulse" noise from habit-based models. |
 | **Metric Precision** | Scale-mismatch in noisy segments. | **Segment-Specific ARIMA** | Lowered sMAPE and higher forecasting precision. |
 
-![Forecast Comparison Plot]
 
+<img width="1216" height="447" alt="image" src="https://github.com/user-attachments/assets/2c577d1a-e406-4b4e-936d-746f549d2ffd" />
 
+<img width="1195" height="389" alt="image" src="https://github.com/user-attachments/assets/509b27f9-f98b-4cda-8861-ea0db27a4303" />
+
+<img width="731" height="363" alt="image" src="https://github.com/user-attachments/assets/ae3f80fb-6053-49e9-acd8-733317e85117" />
 
 
 # Business Insights: Strategic Interpretation of Reconstructed Customer Signals
