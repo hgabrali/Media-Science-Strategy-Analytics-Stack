@@ -116,6 +116,9 @@ This technical revision delineates a robust engineering framework designed to mi
 * **The "RFM Bridge" (Hybrid Feature Engineering):**
     * Calculation of **RFM (Recency, Frequency, Monetary)** metrics to provide a business-logic layer.
     * Computation of the **Complexity-Invariant Distance (CID)** Matrix to capture temporal shape similarity.
+ 
+<img width="765" height="468" alt="image" src="https://github.com/user-attachments/assets/28d9c66d-980e-4a57-be62-2b8e13efa216" />
+
     * **Feature Scaling:** Unification of diverse metric scales through `MinMaxScaler` or `StandardScaler` to ensure dimensional parity.
 * **Hierarchical Clustering Depth:**
     * Deployment of the **Elbow Method** and **Silhouette Analysis** to determine the optimal $k$-clusters.
