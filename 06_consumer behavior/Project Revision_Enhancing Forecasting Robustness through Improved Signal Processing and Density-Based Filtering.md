@@ -1,6 +1,6 @@
 # Project Revision: Enhancing Forecasting Robustness through Improved Signal Processing and Density-Based Filtering
 
-##  Research Methodology (Image 1):
+## Research Methodology (Image 1):
 <img width="1024" height="597" alt="image" src="https://github.com/user-attachments/assets/865f851f-7e02-4fd4-aaae-dbe1e49a8ca1" />
 
 
