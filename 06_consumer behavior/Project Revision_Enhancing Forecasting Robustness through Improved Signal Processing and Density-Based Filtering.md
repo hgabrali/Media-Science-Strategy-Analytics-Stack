@@ -87,6 +87,9 @@ This technical revision delineates a robust engineering framework designed to mi
 
 ### Phase 3: Stochastic Signal Filtering (Engineering - Part 1) 🔍
 * **Habitual Density Thresholding:** Filtering for customers with a transaction density $\ge 70\%$.
+
+  <img width="781" height="396" alt="image" src="https://github.com/user-attachments/assets/3014d092-eb4f-4e7f-9f0a-bb4460845f53" />
+
 * **Engineering Logic:** This step is prioritized to ensure that subsequent statistical tests are executed only on "model-able" signals, significantly increasing the **Signal-to-Noise Ratio (SNR)**.
 
 ### Phase 4: Temporal Exploratory Data Analysis (Explore) 🕰️
