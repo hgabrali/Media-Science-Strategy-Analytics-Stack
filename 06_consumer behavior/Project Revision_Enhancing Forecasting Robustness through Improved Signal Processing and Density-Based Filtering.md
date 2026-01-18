@@ -83,6 +83,10 @@ This technical revision delineates a robust engineering framework designed to mi
     * **Deduplication:** Removal of redundant entries based on Invoice, StockCode, and Customer ID to prevent autocorrelation bias.
     * **Net Revenue Logic:** Implementation of a **"Return Strategy"** where $TotalAmount$ is calculated as $Quantity \times Price$, ensuring that credit notes and returns are treated as additive signal corrections rather than isolated noise.
     * **Outlier Mitigation:** Application of **Winsorization** (95th percentile limit) to neutralize the influence of heavy-tailed distributions and anomalous corporate bulk purchases.
+ 
+<img width="736" height="410" alt="image" src="https://github.com/user-attachments/assets/b169af7f-f98f-4ba4-9b9a-6479b0cc748d" />
+
+   
 * **Post-Scrub Distribution Analysis:** Statistical validation of the sanitized features. Visualizing the **"Spending Distribution"** and **"Return Ratio"** to confirm the normalization of the dataset and readiness for modeling.
 
 ### Phase 3: Stochastic Signal Filtering (Engineering - Part 1) 🔍
