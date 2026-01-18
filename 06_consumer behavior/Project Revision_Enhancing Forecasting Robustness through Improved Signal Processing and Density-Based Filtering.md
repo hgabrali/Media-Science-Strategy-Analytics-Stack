@@ -130,6 +130,9 @@ This technical revision delineates a robust engineering framework designed to mi
       <img width="645" height="369" alt="image" src="https://github.com/user-attachments/assets/a4612e4f-1bb0-496b-8e75-eb20d6d4f91e" />
 
     * Application of **K-Means++** or **Ward’s Hierarchical Clustering** to define customer behavioral segments.
+ 
+  <img width="506" height="367" alt="image" src="https://github.com/user-attachments/assets/2ef4087c-e8bd-402d-ac8c-39cabba6cf66" />
+
 
 ### Phase 6: SWCW Predictive Modeling & Validation (Model & Evaluate) 🤖
 * **Segment-Wise-Customer-Wise (SWCW) Forecasting:**
