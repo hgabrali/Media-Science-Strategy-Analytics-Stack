@@ -3,6 +3,69 @@
 <img width="1122" height="626" alt="image" src="https://github.com/user-attachments/assets/c4a0cd71-be24-46d7-a015-033df3bf5fcc" />
 
 
+
+# Comparative Analysis: Research Methodology vs. SWCW Forecasting Framework
+
+This document provides a technical comparison between the general research methodology (Image 1) and the specialized SWCW (Segment-Wise-Customer-Wise) Forecasting Framework (Image 2). The following analysis highlights the evolution from standard procedural workflows to high-precision engineering frameworks.
+
+---
+
+## 🔍 Comparative Technical Analysis
+
+| Analysis Area | Research Methodology (Image 1) | SWCW Forecasting Framework (Image 2) |
+| :--- | :--- | :--- |
+| **Diagram Type & Purpose** | **Process Flowchart:** Designed to visualize sequential experimental steps and compare three distinct forecasting paths. | **Conceptual Infographic:** Designed to illustrate the engineering of robustness and the delivery of strategic business value. |
+| **Scope & Focus** | **Comparative Methodology:** Emphasizes the workflow differences between Aggregate, Segment-Wise-Aggregate, and SWCW paths. | **Technical Value Proposition:** Focuses on the transformation of "Raw Signals" into "Strategic Drivers" through specialized refinement. |
+| **Preprocessing & Signal Processing** | **General Operations:** Includes basic data splitting, target selection, RFM extraction, outlier removal, and normalization. | **Advanced Sanitation:** Employs **Winsorization**, **Linear Interpolation**, **Habitual Density Filtering ($\ge 70\%$)**, and **Savitzky-Golay Filters**. |
+| **Modeling Approach** | **Standard Procedural:** Involves time-series clustering and finding the best ARIMA model based on mean cluster/global series. | **Granular Iteration:** Utilizes **Iterative ARIMA Loops** for every individual customer, optimizing hyperparameters at the micro-level. |
+| **Outcome & Performance** | **Procedural Validation:** Ends with a general "performance comparison" and visualization of the best results. | **Business Synthesis:** Explicitly contrasts "Noisy sMAPE" vs. "Optimized sMAPE" and maps results to **Inventory Turnover** and **Resource Allocation**. |
+
+---
+
+## 🏗️ Structural Breakdown
+
+### 1. Methodology Evolution
+While Image 1 provides the structural skeleton for a scientific experiment, Image 2 acts as the **robustness layer**. It replaces standard "Outlier Removal" with "Advanced Signal Sanitation" to ensure that the integration of credit notes and returns are treated as corrective signals rather than disruptive noise.
+
+
+
+### 2. Signal-to-Noise Ratio (SNR) Optimization
+The transition from Image 1 to Image 2 represents a shift toward higher **Signal-to-Noise Ratio (SNR)**. Image 2 introduces specific thresholds—such as the **Habitual Density Threshold ($\ge 70\%$)**—to filter out "Impulse" noise, ensuring the model only processes predictable, habit-based behavior.
+
+### 3. Performance Shift Summary
+The following table summarizes the performance outcomes as defined in the framework comparison:
+
+| Metric / Feature | Aggregate Forecasting (Baseline) | SWCW Methodology (Proposed) |
+| :--- | :--- | :--- |
+| **Error Rate** | High (Noisy sMAPE) | **Optimized (Low sMAPE)** |
+| **Signal Quality** | Raw / Unfiltered | **Sanitized & Smoothed** |
+| **Granularity** | Macro-Level Aggregation | **Micro-Level (Individual) Optimization** |
+| **Business Impact** | Static Projections | **Dynamic Resource Allocation** |
+
+---
+
+> **Technical Note:** The implementation of the **Savitzky-Golay Filter** in the SWCW framework is critical for reconstructing the trend line without the phase shift typically introduced by moving averages, preserving the temporal integrity of retail signals.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------
+
 ## 📈 Executive Summary
 
 This technical revision delineates a robust engineering framework designed to mitigate the high **Stochasticity** (rastlantısallık) inherent in the Online Retail II dataset. By transitioning from a standard aggregate approach to a **Segment-Wise-Customer-Wise (SWCW)** methodology, we aim to isolate the **"Latent Behavioral Signal"** from seasonal **"Market Static."**
