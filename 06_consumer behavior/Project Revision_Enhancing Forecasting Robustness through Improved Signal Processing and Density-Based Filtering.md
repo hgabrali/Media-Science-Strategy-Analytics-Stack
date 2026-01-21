@@ -330,14 +330,13 @@ Bu teknik revizyon, **Online Retail II** veri setinde doğal olarak bulunan yük
 
 ---
 
-# 📊 Technical Comparative Matrix: Research Baseline vs. Empirical Implementation
+# Technical Comparative Matrix: Research Baseline vs. Empirical Implementation
 
 ---
 
 ##  Overview
 This document provides a detailed technical comparison between theoretical research baselines and the practical realities encountered during empirical implementation. It highlights the engineering resolutions required to bridge the gap between idealized datasets and volatile, real-world retail environments.
 
-![Technical Comparative Matrix Placeholder](https://via.placeholder.com/800x400?text=Technical+Comparative+Matrix+Visual)
 
 ---
 
