@@ -330,3 +330,39 @@ Bu teknik revizyon, **Online Retail II** veri setinde doğal olarak bulunan yük
 
 ---
 
+# 📊 Technical Comparative Matrix: Research Baseline vs. Empirical Implementation
+
+---
+
+##  Overview
+This document provides a detailed technical comparison between theoretical research baselines and the practical realities encountered during empirical implementation. It highlights the engineering resolutions required to bridge the gap between idealized datasets and volatile, real-world retail environments.
+
+![Technical Comparative Matrix Placeholder](https://via.placeholder.com/800x400?text=Technical+Comparative+Matrix+Visual)
+
+---
+
+##  Comparative Analysis Table
+
+| Technical Dimension | Research Baseline (Bank POS) | Project Reality (Online Retail II) | Engineering Resolution |
+| :--- | :--- | :--- | :--- |
+| **Stochastic Divergence** | Low **CV** (Coefficient of Variation); routine consumption patterns. | High-frequency noise; **promotion-driven** volatility and spikes. | Transition to **Signal-to-Noise Ratio (SNR)** optimization. |
+| **Sampling Effects** | Large sample size (**N=123k**); stabilized by the **Law of Large Numbers**. | Small cluster cohorts; hypersensitive to **Outlier Behavior**. | Implementation of **Habitual Density** filtering. |
+| **Metric Integrity** | **CID** (Complexity-Invariant Distance) on continuous data. | "Silent Weeks" creating **Artificial Complexity** in CID. | Deployment of **Linear Interpolation** as a prerequisite. |
+| **Clustering Depth** | Unidimensional (**Shape-based** clustering only). | Disconnect between shape similarity and **Monetary Magnitude**. | Engineered a **Hybrid RFM Bridge** for multi-view alignment. |
+| **Model Linearity** | Universal success using **SWCW ARIMA**. | Linear failure in sparse segments; **Constant Prediction** errors. | Validation of the need for **Non-linear Architectures** (LSTM/GARCH). |
+| **Signal Processing** | Direct analysis on raw, aggregated time series. | **Latent Habitual Signal** obscured by market static. | Mandatory **Savitzky-Golay** Signal Reconstruction layer. |
+
+---
+
+##  Key Technical Definitions
+
+* **Stochastic Divergence:** Measures the variance in data patterns. In retail, this is often exacerbated by seasonal promotions.
+* **Sampling Effects:** Refers to how the volume of data affects the stability of statistical models.
+* **Metric Integrity:** The reliability of distance metrics (like CID) when faced with missing or sparse data (e.g., "Silent Weeks").
+* **Clustering Depth:** The dimensionality of customer segmentation, moving from simple shape analysis to multi-faceted behavioral models.
+* **Model Linearity:** The determination of whether linear statistical models (ARIMA) or non-linear deep learning models (LSTM) are appropriate for the dataset.
+* **Signal Processing:** The methods used to clean and reconstruct the underlying behavioral signals from noisy market data.
+
+---
+
+
