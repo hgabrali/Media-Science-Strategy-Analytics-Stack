@@ -59,9 +59,9 @@ The following table summarizes the performance outcomes as defined in the framew
 
 ------
 
-## 📈 Executive Summary
+## Executive Summary
 
-This technical revision delineates a robust engineering framework designed to mitigate the high **Stochasticity** (rastlantısallık) inherent in the Online Retail II dataset. By transitioning from a standard aggregate approach to a **Segment-Wise-Customer-Wise (SWCW)** methodology, we aim to isolate the **"Latent Behavioral Signal"** from seasonal **"Market Static."**
+This technical revision delineates a robust engineering framework designed to mitigate the high **Stochasticity**  inherent in the Online Retail II dataset. By transitioning from a standard aggregate approach to a **Segment-Wise-Customer-Wise (SWCW)** methodology, we aim to isolate the **"Latent Behavioral Signal"** from seasonal **"Market Static."**
 
 ### Key Business Value Drivers:
 
@@ -71,16 +71,16 @@ This technical revision delineates a robust engineering framework designed to mi
 
 ---
 
-## 🏗️ Technical Architecture: The End-to-End Pipeline
+## Technical Architecture: The End-to-End Pipeline
 
-### Phase 1: Data Ingestion & Infrastructure Initialization (Obtain) 📥
+### Phase 1: Data Ingestion & Infrastructure Initialization (Obtain) 
 * **Environment Orchestration:** Configuration of high-performance compute resources (GPU/CPU) and deployment of specialized dependencies (e.g., `pmdarima`, `statsmodels`).
 * **Library Synchronization:** Loading core computational frameworks for signal processing (`scipy.signal`), statistical modeling (`statsmodels`), and machine learning (`sklearn`).
 * **Data Acquisition & Preliminary Inspection:** Executing initial ingestion and verifying data schema integrity via descriptive statistical summaries (`.describe()`) and structural metadata analysis (`.info()`).
 
 ![Data Pipeline Overview]
 
-### Phase 2: Advanced Data Sanitation & Feature Rectification (Scrub) 🧹
+### Phase 2: Advanced Data Sanitation & Feature Rectification (Scrub) 
 * **Data Sanitization (Advanced):**
     * **Deduplication:** Removal of redundant entries based on Invoice, StockCode, and Customer ID to prevent autocorrelation bias.
     * **Net Revenue Logic:** Implementation of a **"Return Strategy"** where $TotalAmount$ is calculated as $Quantity \times Price$, ensuring that credit notes and returns are treated as additive signal corrections rather than isolated noise.
@@ -91,7 +91,8 @@ This technical revision delineates a robust engineering framework designed to mi
    
 * **Post-Scrub Distribution Analysis:** Statistical validation of the sanitized features. Visualizing the **"Spending Distribution"** and **"Return Ratio"** to confirm the normalization of the dataset and readiness for modeling.
 
-### Phase 3: Stochastic Signal Filtering (Engineering - Part 1) 🔍
+### Phase 3: Stochastic Signal Filtering (Engineering - Part 1) 
+
 * **Habitual Density Thresholding:** Filtering for customers with a transaction density $\ge 70\%$.
 
   <img width="763" height="474" alt="image" src="https://github.com/user-attachments/assets/cc2ea763-b71f-40c9-87b9-50c539e7b43d" />
@@ -102,7 +103,7 @@ This technical revision delineates a robust engineering framework designed to mi
 <img width="920" height="558" alt="image" src="https://github.com/user-attachments/assets/3677817f-d316-49de-a851-a848984d665f" />
 
 
-### Phase 4: Temporal Exploratory Data Analysis (Explore) 🕰️
+### Phase 4: Temporal Exploratory Data Analysis (Explore) 
 * **Deep Temporal EDA (T-EDA):**
     * **Stationarity Assessment:** Execution of the **Augmented Dickey-Fuller (ADF)** Test to determine the integration order ($d$ parameter).
     * **Order Selection:** Analysis of **ACF/PACF** (Autocorrelation and Partial Autocorrelation) plots to identify the $p$ (Auto-regressive) and $q$ (Moving Average) components.
@@ -122,7 +123,7 @@ This technical revision delineates a robust engineering framework designed to mi
 * **The "RFM Bridge" (Hybrid Feature Engineering):**
     * Calculation of **RFM (Recency, Frequency, Monetary)** metrics to provide a business-logic layer.
     * Computation of the **Complexity-Invariant Distance (CID)** Matrix to capture temporal shape similarity.
-    * 
+      
  
 <img width="765" height="468" alt="image" src="https://github.com/user-attachments/assets/28d9c66d-980e-4a57-be62-2b8e13efa216" />
 
@@ -158,12 +159,9 @@ This technical revision delineates a robust engineering framework designed to mi
 * **Interpretive Visualization:** Final presentation of **"Actual vs. Forecast"** plots in a publication-standard format, highlighting the predictive delta across diverse behavioral segments.
 
 
-
-
-
 ---
 
-## 🔬 Technical Update: Comparison of Improvements
+## Technical Update: Comparison of Improvements
 
 | Analysis Area | Problem Identified | Engineering Solution | Expected Outcome |
 | :--- | :--- | :--- | :--- |
