@@ -14,10 +14,10 @@ By replicating the proposed **Segment-Wise-Customer-Wise (SWCW)** approach, this
 
 
 
-## 1. Project Overview 🚀
+## 1. Project Overview 
 The goal of this study is to move beyond aggregate baseline models to provide granular, high-accuracy forecasts for customer segments. By treating customer transaction history as individual time series, we capture unique **Behavioral Patterns** often lost in global models.
 
-## 2. Dataset Specification 📊
+## 2. Dataset Specification 
 We utilize the **Online Retail II** dataset from the UCI Machine Learning Repository.
 
 * **Source:** [UCI Machine Learning Repository - Online Retail II](https://archive.ics.uci.edu/ml/datasets/Online+Retail+II)
@@ -28,7 +28,7 @@ We utilize the **Online Retail II** dataset from the UCI Machine Learning Reposi
 
 ---
 
-## 3. Methodology & Workflow 🛠️
+## 3. Methodology & Workflow 
 
 ### Phase A: Preprocessing
 * **Temporal Splitting:** Transactional data is aggregated into weekly intervals.
@@ -72,7 +72,7 @@ This study transforms the academic SWCW framework into an operational system for
 
 ---
 
-## 6. Technical Stack 💻
+## 6. Technical Stack 
 * **Language:** Python 3.x
 * **Libraries:** `pandas`, `numpy`, `pmdarima`, `tslearn`, `scikit-learn`, `matplotlib`.
 
@@ -80,36 +80,35 @@ This study transforms the academic SWCW framework into an operational system for
 ----
 
 
-# 📊 Technical Final Report: Enhancing Customer Behavior Forecasting via Segment-Wise Time Series Analysis
+#  Technical Final Report: Enhancing Customer Behavior Forecasting via Segment-Wise Time Series Analysis
 
-## 📝 Executive Summary (Yönetici Özeti)
+##  Executive Summary
 This project focuses on developing a high-precision forecasting methodology (Yüksek hassasiyetli tahminleme metodolojisi) for customer behavior, specifically targeting the **Monetary (M)** attribute of the RFM model. 
 
-By integrating **Time Series Clustering (Zaman Serisi Kümeleme)** using **Complexity-Invariant Distance (CID)** and a specialized **Segment-Wise-Customer-Wise (SWCW) ARIMA** approach, we have created a system that significantly outperforms traditional aggregate forecasting methods. This approach allows businesses to move beyond "one-size-fits-all" models, providing granular insights into individual customer spending patterns and enabling more efficient resource allocation.
+By integrating **Time Series Clustering** using **Complexity-Invariant Distance (CID)** and a specialized **Segment-Wise-Customer-Wise (SWCW) ARIMA** approach, we have created a system that significantly outperforms traditional aggregate forecasting methods. This approach allows businesses to move beyond "one-size-fits-all" models, providing granular insights into individual customer spending patterns and enabling more efficient resource allocation.
 
 ---
 
-## 1. Introduction (Giriş)
-Forecasting customer behavior is a critical component of **Business Intelligence (BI - İş Zekası)**. While traditional models focus on aggregate data (toplulaştırılmış veri), this project addresses the challenge of managing diverse customer populations by segmenting them based on past transactional time series.
+## 1. Introduction 
+Forecasting customer behavior is a critical component of **Business Intelligence (BI)**. While traditional models focus on aggregate data (toplulaştırılmış veri), this project addresses the challenge of managing diverse customer populations by segmenting them based on past transactional time series.
 
-## 2. Dataset Specification (Veri Kümesi Özellikleri)
+## 2. Dataset Specification
 * **Source:** Online Retail II Dataset (UCI Machine Learning Repository).
 * **Raw Data:** Over 525,000 records of transactions including Customer ID, InvoiceDate, Price, and Quantity.
 * **Target Metric:** The **Monetary (M)** attribute, calculated as the total purchase amount per customer within a specific time interval.
 
-## 3. Methodology (Metodoloji)
+## 3. Methodology
 
-### 3.1. Preprocessing (Ön İşleme)
+### 3.1. Preprocessing
 The raw transactional data underwent rigorous engineering steps:
-* **Temporal Aggregation (Zamansal Toplulaştırma):** Data was split into weekly intervals to reduce daily noise and create a manageable 44-point time series.
+* **Temporal Aggregation:** Data was split into weekly intervals to reduce daily noise and create a manageable 44-point time series.
 * **Target Selection:** Focused on active customers who exhibited transactions across all time points.
-* **Outlier Removal (Aykırı Değer Temizleme):** Applied standard deviation-based clipping to eliminate anomalies and incorrect data points.
-* **Normalization (Normalizasyon):** Employed Min-Max Normalization to scale values between $0$ and $1$ for consistent comparison across different customer tiers.
+* **Outlier Removal:** Applied standard deviation-based clipping to eliminate anomalies and incorrect data points.
+* **Normalization:** Employed Min-Max Normalization to scale values between $0$ and $1$ for consistent comparison across different customer tiers.
 
-### 3.2. Time Series Clustering (Zaman Serisi Kümeleme)
-To group similar behaviors, we implemented **Hierarchical Agglomerative Clustering (Hiyerarşik Kümeleme)** with Ward's Method.
+### 3.2. Time Series Clustering
 
-
+To group similar behaviors, we implemented **Hierarchical Agglomerative Clustering** with Ward's Method.
 
 * **Similarity Measure:** Complexity-Invariant Distance (CID). Unlike standard Euclidean distance, CID incorporates a complexity correction factor $CF$:
   $$d_{CID}(X,Y) = CF(X,Y) \cdot d_{L2}(X,Y)$$
@@ -125,14 +124,14 @@ The project implemented and compared three approaches:
 
 ---
 
-## 4. Experimental Results & Analysis (Deneysel Sonuçlar ve Analiz)
+## 4. Experimental Results & Analysis
 
-### 4.1. Evaluation Metrics (Değerlendirme Metrikleri)
+### 4.1. Evaluation Metrics
 Success was measured using **RMSE** and **SMAPE**:
-* **RMSE (Kök Ortalama Kare Hata):** Measures the deviation of forecast values from actual values.
-* **SMAPE (Simetrik Ortalama Mutlak Yüzde Hata):** Provides a symmetric percentage error, useful for scale-independent comparison.
+* **RMSE:** Measures the deviation of forecast values from actual values.
+* **SMAPE:** Provides a symmetric percentage error, useful for scale-independent comparison.
 
-### 4.2. Comparative Performance (Karşılaştırmalı Performans)
+### 4.2. Comparative Performance 
 | Forecasting Method | RMSE | SMAPE |
 | :--- | :--- | :--- |
 | **Aggregate Forecasting** | 0.0450 | 0.5900 |
@@ -142,12 +141,12 @@ Success was measured using **RMSE** and **SMAPE**:
 ### 4.3. Visualization (Actual vs. Predicted)
 Visual analysis across the 4 segments confirms that the **SWCW model** tracks peaks and volatility much more effectively than the SWA method.
 
-## 5. Conclusion (Sonuç)
+## 5. Conclusion 
 The implementation confirms that behavioral segmentation combined with individual-level time series modeling (SWCW) provides a higher level of accuracy than baseline models. This methodology is highly generalizable to other domains requiring effective future behavior forecasting for diverse groups.
 
 ---
 
-## 📂 Appendix (Ekler)
+## 📂 Appendix 
 
 ### Technical Stack (Teknoloji Yığını)
 * **Language:** Python 3.10+
@@ -174,7 +173,7 @@ The implementation confirms that behavioral segmentation combined with individua
 <img width="1405" height="498" alt="image" src="https://github.com/user-attachments/assets/7f7ae873-5297-4d07-9ecb-98520319f65b" />
 
 
-## 📝 Executive Summary 
+##  Executive Summary 
 This analysis delineates the fundamental engineering and statistical drivers behind the structural differences between the **"Actual"** data presented in the reference paper (Bank POS transactions) and the **Online Retail II** dataset. The divergence is primarily attributed to sectoral stability, sample size effects, and specific mathematical filtering.
 
 * In the Bank POS study, the "Actual" line is essentially a **low-pass filtered** version of consumer behavior due to the sheer volume of transactions. In Online Retail, we are dealing with **high-entropy data** where individual event-driven impulses dominate the signal.
@@ -183,19 +182,19 @@ Bu analiz, referans makaledeki (Banka POS işlemleri) "Gerçek" (Actual) veriler
 
 ---
 
-## 🔍 Detailed Technical Analysis 
+## Detailed Technical Analysis 
 
 ### 1. Sectoral Divergence 
 The paper utilizes bank POS transaction data, specifically filtering for a **"specific guild"** rather than analyzing the entire bank portfolio.
 
 * **Paper Data :** They likely selected a sector with routine consumption (e.g., supermarket chains or pharmacies) where weekly spending habits are highly stable.
-* **Online Retail II:** This dataset primarily consists of giftware and general retail. These sectors are highly sensitive to promotions, seasonal events (Mother’s Day, Christmas), and stock availability, which creates significant spikes and **Volatility ** in the time series.
+* **Online Retail II:** This dataset primarily consists of giftware and general retail. These sectors are highly sensitive to promotions, seasonal events (Mother’s Day, Christmas), and stock availability, which creates significant spikes and **Volatility** in the time series.
 
 ### 2. The Law of Large Numbers 
-The "Actual" line in the visualizations represents the **Centroid (Merkez/Ortalama)** of all customers within that specific cluster.
+The "Actual" line in the visualizations represents the **Centroid** of all customers within that specific cluster.
 
-* **Paper Data :** The study includes 123,000 active customers with continuous transactions over 44 weeks. With such a large **Sample Size (Örneklem Büyüklüğü)**, individual **Outlier Behaviors (Aykırı Davranışlar)** neutralize each other, making the "average" curve significantly smoother.
-* **Your Data (Sizin Veriniz):** In the Online Retail II set, the number of customers purchasing every single week for 44 weeks is likely much lower. As the sample size decreases, a single large order from one customer can disproportionately pull the cluster average upward, resulting in an **Irregular (Düzensiz)** appearance.
+* **Paper Data :** The study includes 123,000 active customers with continuous transactions over 44 weeks. With such a large **Sample Size**, individual **Outlier Behaviors** neutralize each other, making the "average" curve significantly smoother.
+* **Our Data:** In the Online Retail II set, the number of customers purchasing every single week for 44 weeks is likely much lower. As the sample size decreases, a single large order from one customer can disproportionately pull the cluster average upward, resulting in an **Irregular** appearance.
 
 ### 3. Rigidity of the "Active Customer" Definition 
 The paper constructs its methodology exclusively on "customers who have transactions at all time points."
@@ -211,7 +210,7 @@ The paper employs **Complexity-Invariant Distance (CID)** as the primary metric 
 * 
 $$d_{CID}(X,Y) = CF(X,Y) \cdot d_{L2}(X,Y)$$
 
-* **Result (Sonuç):** This allows the authors to sharply isolate "regular spenders" into one cluster and "irregular spenders" into another. If the distance metric used does not capture these **Complexity Nuances**, clustering results may remain heterogeneous.
+* **Result:** This allows the authors to sharply isolate "regular spenders" into one cluster and "irregular spenders" into another. If the distance metric used does not capture these **Complexity Nuances**, clustering results may remain heterogeneous.
 
 
 
