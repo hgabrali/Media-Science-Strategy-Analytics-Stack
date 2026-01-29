@@ -264,7 +264,7 @@ Bu teknik revizyon, **Online Retail II** veri setinde doğal olarak bulunan yük
 
 ---
 
-## 🏗️ Teknik Mimari: Uçtan Uca Boru Hattı 
+## 🏗️ Teknik Mimari
 
 ### Aşama 1: Veri Alımı ve Altyapı Başlatma 
 * **Ortam Orkestrasyonu (Environment Orchestration):** Yüksek performanslı hesaplama kaynaklarının (GPU/CPU) konfigürasyonu ve özel bağımlılıkların (**pmdarima**, **statsmodels**) konuşlandırılması.
