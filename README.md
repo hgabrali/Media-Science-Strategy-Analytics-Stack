@@ -1,5 +1,9 @@
 # Media Science & Strategy Analytics Stack
 
+<img width="1164" height="618" alt="image" src="https://github.com/user-attachments/assets/eec0a7b5-907b-4c4a-afc2-8e7729c259d5" />
+
+ *This strategic analysis was curated and prompts-engineered by **Hande Gabrali-Knobloch**,Powered by NotebookLM  based on the provided texts.*
+
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![Domain](https://img.shields.io/badge/domain-AdTech%20%26%20MarTech-orange)
