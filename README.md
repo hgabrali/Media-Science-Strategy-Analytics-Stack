@@ -1,5 +1,9 @@
-# Media Science & Strategy Analytics Stack
+# Data Science for Agentic Marketing & Autonomous Media Systems (2026–2035)
 
+## 📖 Introduction: 
+
+This repository serves as a next-generation toolkit for Data Science in Media Buying and Autonomous Strategy.
+While it covers foundational media planning, it is specifically architected to navigate the industry's evolution from persuading human audiences to persuading Autonomous Agents.
 
 <img width="1711" height="904" alt="image" src="https://github.com/user-attachments/assets/7aff9af3-0aba-402e-83c8-1b9ac004844d" />
 
@@ -12,10 +16,7 @@
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![Domain](https://img.shields.io/badge/domain-AdTech%20%26%20MarTech-orange)
 
-# 📖 Introduction: Data Science for Agentic Marketing & Autonomous Media Systems (2026–2035)
 
-This repository serves as a next-generation toolkit for Data Science in Media Buying and Autonomous Strategy.
-While it covers foundational media planning, it is specifically architected to navigate the industry's evolution from persuading human audiences to persuading Autonomous Agents.
 
 ## 📂 Repository Structure
 
