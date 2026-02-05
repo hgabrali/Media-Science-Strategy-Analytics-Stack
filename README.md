@@ -1,4 +1,4 @@
-# Data Science for Agentic Marketing & Autonomous Media Systems (2026–2035)
+
 
 ## 📖 Introduction: 
 
@@ -43,4 +43,4 @@ The repository is organized into seven core modules, each addressing a specific 
 management](https://www.businessperspectives.org/images/pdf/applications/publishing/templates/article/assets/18030/IM_2023_02_Chornous.pdf)
 * [Using Data Sciences in Digital Marketing: Framework, methods, and performance metrics](https://pmc.ncbi.nlm.nih.gov/articles/PMC7428685/pdf/main.pdf
 
-##### Strategic Analysis & Credits: This strategic analysis was curated and prompts-engineered by Hande Gabrali-Knobloch, Powered by NotebookLM.
+##### **Strategic Analysis & Credits:** This strategic analysis was curated and prompts-engineered by Hande Gabrali-Knobloch, Powered by NotebookLM.
