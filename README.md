@@ -23,13 +23,16 @@ This project is intended for Data Scientists, Media Planners, and AdTech Enginee
 The repository is organized into five core modules, each addressing a specific vertical of media analytics:
 
 ```bash
-media-science-stack/
-├── 01_audience_intelligence/    # Segmentation, Clustering, & Lookalike Modeling
-├── 02_marketing_mix_modeling/   # MMM, Adstock transformations, & Budget Optimization
-├── 03_attribution_modeling/     # Multi-Touch Attribution (Markov, Shapley)
-├── 04_programmatic_bidding/     # CTR Prediction & Bid Optimization Algorithms
-├── 05_brand_sentiment/          # NLP for Brand Lift & Social Listening
-└── data/                        # Sample datasets (anonymized)
+📂 Media-Science-Strategy-Analytics-Stack
+├── 📁 01_audience_intelligence
+├── 📁 02_marketing_mix_modeling
+├── 📁 03_attribution_modeling
+├── 📁 04_programmatic_bidding
+├── 📁 05_brand_sentiment
+├── 📁 06_consumer_behavior
+├── 📁 07_agentic_M2M_Marketing
+├── 📁 GA4_Project
+└── ... (other files)
 ```
 
 
