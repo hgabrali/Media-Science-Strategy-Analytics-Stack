@@ -1,5 +1,9 @@
 # Media Science & Strategy Analytics Stack
 
+
+<img width="1711" height="904" alt="image" src="https://github.com/user-attachments/assets/7aff9af3-0aba-402e-83c8-1b9ac004844d" />
+
+
 <img width="1164" height="618" alt="image" src="https://github.com/user-attachments/assets/eec0a7b5-907b-4c4a-afc2-8e7729c259d5" />
 
  *This strategic analysis was curated and prompts-engineered by **Hande Gabrali-Knobloch**,Powered by NotebookLM  based on the provided texts.*
